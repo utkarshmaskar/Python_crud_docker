@@ -7,9 +7,9 @@ fa = FontAwesome(app)
 
 app.secret_key = 'flash message'
 
-app.config['MYSQL_HOST'] = 'localhost'
+app.config['MYSQL_HOST'] = 'mysql_db'
 app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = ''
+app.config['MYSQL_PASSWORD'] = 'root123'
 app.config['MYSQL_DB'] = 'python_crud'
 
 mysql = MySQL(app)
@@ -68,4 +68,4 @@ def delete(id_data):
     return redirect(url_for('index'))
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)
