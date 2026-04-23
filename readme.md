@@ -1,31 +1,25 @@
-# Python Flask CRUD App
+# Flask MySQL CRUD App — Dockerized
 
-Python-Flask Web Application CRUD Example with MySQL Database
+A student management CRUD app built with Python Flask and MySQL, 
+fully containerized using Docker and Docker Compose.
 
-This repository is based on simple code for Python web application CRUD app using Flask and MySQL. 
-CRUD means Create, Read, Update and Delete operations. 
+## How to Run
 
-This app will let you add new student record, read and show student records, update student record and delete student record. Python-Flask web application framework or module is being used to handle the requests and responses from users.
-For better understanding of code and working, read the comments present in the file and you will get to learn things easily.
+git clone your_repo_url
+cd flask-docker-crud
+docker compose up --build
 
-## Tech Stack used in the project
+Access at: http://localhost:5001
 
-- Back End :- Programming Language - Python
-- Front End :- HTML, CSS, Bootstrap
-- Database :- MySQL
+## What I Did
+- Wrote Dockerfile for Flask app
+- Wrote docker-compose.yml wiring Flask + MySQL
+- Created MySQL volume for data persistence
+- Fixed networking between containers
+- Deployed locally using Docker Compose
 
-## Running the application
-
-Python app.py
-
-## Checking the User Interface
-
-https://localhost:5000/
-
-## Installing Flask 
-
-pip install Flask
-
-## Preview
-
-![screenshot](preview.png)
+## Tech Stack
+- Python Flask
+- MySQL 8.0
+- Docker
+- Docker Compose# Python Flask CRUD App
