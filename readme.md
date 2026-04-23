@@ -23,3 +23,13 @@ Access at: http://localhost:5001
 - MySQL 8.0
 - Docker
 - Docker Compose# Python Flask CRUD App
+
+- Key Lessons
+
+Dockerfile → builds your custom app image
+docker-compose.yml → wires everything together
+Containers talk using service names not localhost
+Flask must run on 0.0.0.0 to be accessible outside container
+Always use --build after code changes
+Use down -v to wipe volumes and start MySQL fresh
+Port conflicts on Mac — ControlCenter owns 5000, use 5001
