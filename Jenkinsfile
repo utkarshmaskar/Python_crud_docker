@@ -15,13 +15,15 @@ pipeline {
                 sh 'docker build -t flask-crud-app:latest .'
             }
         }
+	stage('Run App') {
+   	 steps {
+        	echo 'Running the app...'
+       		 sh 'docker-compose down'
+       		 sh 'docker-compose up -d --build'
+    }
+}
 
-        stage('Run App') {
-            steps {
-                echo 'Running the app...'
-                sh 'docker-compose up -d --build'
-            }
-        }
+       
     }
 
     post {
