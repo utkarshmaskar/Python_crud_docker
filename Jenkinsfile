@@ -19,7 +19,7 @@ pipeline {
         stage('Run App') {
             steps {
                 echo 'Running the app...'
-                sh 'docker compose up -d --build'
+                sh 'docker-compose up -d --build'
             }
         }
     }
