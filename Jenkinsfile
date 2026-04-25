@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent { label 'ec2-agent' } 
 
     stages {
         stage('Clone Code') {
@@ -19,6 +19,7 @@ pipeline {
    	 steps {
         	echo 'Running the app...'
        		 sh 'docker-compose down'
+		 sh 'docker volume rm python_crud_application_mysql_data || true'
        		 sh 'docker-compose up -d --build'
     }
 }
